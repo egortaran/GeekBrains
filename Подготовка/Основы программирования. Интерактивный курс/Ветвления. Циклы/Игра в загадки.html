@@ -1,0 +1,60 @@
+<meta charset = "UTF-8">
+<script type="text/javascript">
+
+	var countAnser = 0;
+
+	//Загадка №1
+	var RiddleFirst = prompt('Стоит в саду кудряшка - белая рубашка,Сердечко золотое.Что это такое?');
+	var AnswerFirst1 = 'ромашка'
+	var AnswerFirst2 = 'Ромашка'
+
+	if(RiddleFirst == AnswerFirst1 || RiddleFirst == AnswerFirst2){
+		alert("Поздравляю, вы угадали!")
+		countAnser++
+	}
+	else 
+		alert("Увы, ответ " + AnswerFirst2)
+
+	//Загадка №2
+	var RiddleSecond = prompt('Зимой и летом одним цветом.');
+	var AnswerSecond1 = 'Ёлка';
+	var AnswerSecond2 = 'ёлка';
+	var AnswerSecond3 = 'Елка';
+	var AnswerSecond4 = 'елка';
+
+	if( RiddleSecond == AnswerSecond1 || RiddleSecond == AnswerSecond2 || RiddleSecond == AnswerSecond3 || RiddleSecond == AnswerSecond4){
+		alert("Поздравляю, вы угадали!")
+		countAnser++
+	}
+	else 
+		alert("Увы, ответ " + AnswerSecond1)
+
+	//Загадка №3
+	var RiddleThird = prompt('Рыжая, с пушистым хвостом, живет в лесу под кустом.');
+	var AnswerThird1 = 'Лиса';
+	var AnswerThird2 = 'лиса';
+
+	if(RiddleThird == AnswerThird1 || RiddleThird == AnswerThird2 ){
+		alert("Поздравляю, вы угадали!")
+		countAnser++
+	}
+	else 
+		alert("Увы, ответ " + AnswerThird1)
+
+
+	//Загадка №4
+	var RiddleFourth = prompt('Не лает, не кусает, а в дом не пускает');
+	var AnswerFourth1 = 'Замок';
+	var AnswerFourth2 = 'замок';
+
+	if(RiddleFourth == AnswerFourth1 || RiddleFourth == AnswerFourth2 ){
+		alert("Поздравляю, вы угадали!")
+		countAnser++
+	}
+	else 
+		alert("Увы, ответ " + AnswerFourth1)
+	
+
+	document.write("Вы ответили правильно на " + countAnser + " из 4 загадок")
+
+</script>

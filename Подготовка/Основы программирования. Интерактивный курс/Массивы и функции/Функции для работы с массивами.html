@@ -1,0 +1,109 @@
+<meta charset = "UTF-8">
+<script type="text/javascript">
+
+	function TaskA(){
+		var num = prompt("Задание a. Введите число от 0 до 100");
+
+		while(true){
+			if (num >= 0 && num <= 100)
+				break;
+			else
+				num = prompt("Число некорректное. Введите число от 0 до 100");
+		}
+
+		var array = [];
+		for (var i = 1; i <= num; i++)
+			array.push(i)
+
+		return array;
+	}
+
+	function TaskB(){
+		var num = prompt("Задание б. Введите первое число от 0 до 100: ");
+		var array = [];
+		array.push(num);
+
+		while(true){
+			if (num >= 0 && num <= 100){
+				num = prompt("Введите следующие число. Для того, чтобы выйти из цикла, введите некорректное число");
+				array.push(num);
+			}
+			else
+				break;
+				
+		}
+
+		var sum = 0;
+		
+		for (var i = 0; i <= array.length - 2; i++)
+			sum += parseInt(array[i]);
+
+		return sum;
+	}
+
+	function TaskC(){
+		var num = prompt("Задание c. Введите первое число от 0 до 100: ");
+		var array = [];
+		if (num >= 0 && num <= 100)
+			array.push(num);
+
+		while(true){
+			if (num >= 0 && num <= 100){
+				num = prompt("Введите следующие число. Для того, чтобы выйти из цикла, введите некорректное число");
+				if (num >= 0 && num <= 100)
+					array.push(num);
+			}
+			else
+				break;
+				
+		}
+
+		return Math.max.apply(null, array);
+	}
+
+	function TaskD(){
+		var num = prompt("Задание d. Введите первое число от 0 до 100: ");
+		var array = [];
+		if (num >= 0 && num <= 100)
+			array.push(num);
+
+		while(true){
+			if (num >= 0 && num <= 100){
+				num = prompt("Введите следующие число. Для того, чтобы выйти из цикла, введите некорректное число");
+				if (num >= 0 && num <= 100)
+					array.push(num);
+			}
+			else
+				break;
+		}
+
+		return Math.min.apply(null, array);
+	}
+
+	function TaskF(){
+		var num = prompt("Задание f. Введите первое число от 0 до 100: ");
+		var array = [];
+		if (num >= 0 && num <= 100 && (num % 2 == 0))
+			array.push(num);
+
+		while(true){
+			if (num >= 0 && num <= 100){
+				num = prompt("Введите следующие число. Для того, чтобы выйти из цикла, введите некорректное число");
+				if (num >= 0 && num <= 100 && (num % 2 == 0))
+					array.push(num);
+			}
+			else
+				break;
+		}
+
+		return array;
+	}
+	
+	document.write("Результат задания А: <br>" + TaskA() + "<br>");
+	document.write("Результат задания B: <br>" + TaskB() + "<br>");
+	document.write("Результат задания C: <br>" + TaskC() + "<br>");
+	document.write("Результат задания D: <br>" + TaskD() + "<br>");
+	document.write("Результат задания F: <br>" + TaskF() + "<br>");
+
+
+</script>

@@ -1,0 +1,21 @@
+<meta charset = "UTF-8">
+<script type="text/javascript">
+
+	//Вклад
+	var deposit = prompt('Условие вклада: сумма должна быть от 100 до 10.000.000\nСтавка равна 5% годовых \nВведите сумму вклада:');
+	deposit = parseInt(deposit);
+	
+	//Процент
+	var percent = 5;
+
+	if (deposit >= 100 && deposit <= 10000000){
+		for(var i= 1; i<= 5; i++){
+			deposit += deposit/100*5;
+			document.write(i + ' год = ' + deposit.toFixed() + '<br \/>');
+		}
+	}
+	else 
+		document.write('Вы ввели некорректное значение ');
+
+
+</script>

@@ -1,0 +1,16 @@
+<meta charset = "UTF-8">
+<script type="text/javascript">
+
+	// Курс $ и € на 17.11.2020
+	var dollar = 76.34;
+	var euro = 90.58;
+
+	// Переменная для записи ₽
+	var num = prompt("Сколько рублей вы хотите сконвертировать?");
+	num = parseFloat(num);
+
+	// Вывод результата
+	alert(num + "₽ = " + parseInt(num/dollar) + "$\n" + 
+		  num + "₽ = " + parseInt(num/euro) + "€");
+
+</script>

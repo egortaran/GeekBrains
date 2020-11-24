@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+		
+		var score = 0;
+		
+		function chekAnswer(inputId, answers){
+			var userAnswer = document.getElementById(inputId).value;
+			userAnswer=userAnswer.toLowerCase();
+			for(var i = 0; i<answers.length; i++){
+				if(userAnswer == answers[i]){
+					score++;
+					break;
+				}
+			}
+		}
+
+		function checkAnswers(){
+			chekAnswer("userAnswer1",['ромашка']);
+			chekAnswer("userAnswer2",['елка', 'ёлка']);
+			chekAnswer("userAnswer3",['лиса']);
+			chekAnswer("userAnswer4",['замок']);
+			alert("Вы отгадали "+score+" загадок");	
+			score = 0;	
+		}
+
+
+		
+			
+		
+	</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="puzzle.html">Загадки</a>
+		<a href="guess.html">Угадайка</a>
+		<a href="password_generator.html">Генератор пароля</a>
+	</div>
+<div class="contentWrap">
+	<div class="content">
+		<div class="center">
+
+			<h1>Игра в загадки</h1>
+
+			<div class="box">
+				<p>Стоит в саду кудряшка - белая рубашка,Сердечко золотое.Что это такое?'</p>
+				<input type="text" id = "userAnswer1">
+				
+				<p>Зимой и летом одним цветом.</p>
+				<input type="text" id = "userAnswer2">
+				
+				<p>Рыжая, с пушистым хвостом, живет в лесу под кустом.</p>
+				<input type="text" id = "userAnswer3">
+
+				<p>Не лает, не кусает, а в дом не пускает.</p>
+				<input type="text" id = "userAnswer4">
+
+				<br>
+				<a href="#" onClick="checkAnswers();">Ответить</a>
+
+
+			</div>
+
+			
+		</div>
+	</div>
+</div>
+	
+
+</div>
+<div class="footer">
+	Copyright &copy; Egor Taran
+<div>
+
+
+</body>
+</html>

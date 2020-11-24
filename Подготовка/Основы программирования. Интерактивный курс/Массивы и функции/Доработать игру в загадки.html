@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+    var sum = 0;
+
+    function start(riddle){
+        for(var i = 0; i < riddle.length; i++){
+            var userAnswer = prompt(riddle[i][0]);
+            if(userAnswer == riddle[i][1] || userAnswer == riddle[i][2] || userAnswer == riddle[i][3] || userAnswer ==riddle[i][4]){
+                alert('Поздравляю, вы угадали!');
+                sum++; 
+            } else
+                alert("Не верно! Правильный ответ: " + riddle[i][1]);
+        }
+    }
+
+    var riddle = [
+        ['Стоит в саду кудряшка - белая рубашка,Сердечко золотое.Что это такое?', 'ромашка', 'Ромашка'],
+        ['Зимой и летом одним цветом.', 'Ёлка', 'ёлка','Елка', 'елка'],
+        ['Рыжая, с пушистым хвостом, живет в лесу под кустом.', 'Лиса', 'лиса'],
+        ['Не лает, не кусает, а в дом не пускает' , 'Замок', 'замок'],
+    ];
+
+    start(riddle);
+
+    alert("Вы ответили правильно на " + sum + " из 4 загадок");
+
+</script>
